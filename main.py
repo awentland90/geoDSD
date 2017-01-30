@@ -10,28 +10,25 @@ This program is a simple proof of concept and template of the following:
     d. Save query as a CSV
     e. Plot location(s) of query onto a map using matplotlib's basemap
 
+Installation:
+All packages either come with a standard Python installation or are installable with pip or conda
+
+Usage:
+$ python main.py
+
+Input:
+1. CSV of fictious user metadata with lat/lons
+
+Output:
+1. SQLite database file
+2. CSV of SQL query
+3. PNG image of map with location(s) of query results
 
 The dataset used in this program is fictitious and does not intentionally reflect any real person
 In Law & Order speak: "The preceding data is fictional. No actual person or event was depicted."
 
     This dataset created using:
     https://www.mockaroo.com
-
-
-All packages either come with a standard Python installation
-or are installable with pip or conda:
-    sqlite3
-    pandas
-    pygeocoder
-    mpl_toolkits
-    matplotlib
-    numpy
-    os
-    errno
-
-
-Usage:
-$ python main.py
 
 """
 # Import packages and modules
