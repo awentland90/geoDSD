@@ -5,11 +5,11 @@ About
 --------
 This program is a simple proof of concept and template of the following:
 
-a. Create and modify a SQLite database with geospatial data
-b. Create a user defined function to use in a SQL query
-c. Query database and save output to a Pandas dataframe
-d. Save query as a CSV
-e. Plot location(s) of query onto a map using matplotlib's basemap
+a. Create and modify a SQLite database with geospatial data  
+b. Create a user defined function to use in a SQL query  
+c. Query database and save output to a Pandas dataframe  
+d. Save query as a CSV  
+e. Plot location(s) of query onto a map using matplotlib's basemap  
 
 ### Plot locations of SQL query on map
 
@@ -34,14 +34,14 @@ Use the following link to access the git repository:
 ### Library & Package Dependencies
 All packages either come with a standard Python installation or are installable with pip or conda
 
-sqlite3
-pandas
-pygeocoder
-mpl_toolkits
-matplotlib
-numpy
-os
-errno
+sqlite3  
+pandas  
+pygeocoder  
+mpl_toolkits  
+matplotlib  
+numpy  
+os  
+errno  
 
 
 Usage
@@ -54,6 +54,6 @@ Input:
 1. CSV of fictious user metadata with lat/lons
 
 Output:
-1. SQLite database file
-2. CSV of SQL query
-3. PNG image of map with location(s) of query results
+1. SQLite database file  
+2. CSV of SQL query  
+3. PNG image of map with location(s) of query results  
