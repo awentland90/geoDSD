@@ -18,13 +18,16 @@ In Law & Order speak: "The preceding data is fictional. No actual person or even
     https://www.mockaroo.com
 
 
-All packages are installable with pip or conda:
+All packages either come with a standard Python installation
+or are installable with pip or conda:
     sqlite3
     pandas
     pygeocoder
     mpl_toolkits
     matplotlib
     numpy
+    os
+    errno
 
 
 Usage:
@@ -38,6 +41,8 @@ from pygeocoder import Geocoder
 from mpl_toolkits.basemap import Basemap
 import matplotlib.pyplot as plt
 import numpy as np
+import os
+import errno
 
 
 # ~~~~ Specify Directory and File Paths ~~~~ #
@@ -45,21 +50,39 @@ import numpy as np
 # Location of CSV file to import into db as a table
 csv_in = "./raw_data/user_meta_data.csv"
 
-# Location of database to be created
-db_dir = "./database/user_meta_data.db"
+# Location and name of database to be created
+db_dir = "./database/"
+db_file = db_dir+"user_meta_data.db"
 
-# Location of CSV output file of SQL query
-csv_out = "./output/query_results.csv"
+# Output directory
+output_dir = "./output/"
 
-# Location of PNG image of map of SQL query results
-map_out = "./output/query_results.png"
+# Name of CSV output file of SQL query
+csv_out = output_dir + "query_results.csv"
+
+# Name of PNG image of map of SQL query results
+map_out = output_dir + "query_results.png"
 
 
 # ~~~~ Functions ~~~~ #
 
+def make_dir(path):
+    """
+    Function to check if output path exsists, and create directories as needed
+    :param path: directory path
+    :return: new directory if one does not previously exists
+
+    """
+    try:
+        os.makedirs(path)
+    except OSError as exception:
+        if exception.errno != errno.EEXIST:
+            raise
+
+
 def findCountry(latitude, longitude):
     """
-    User created function to return country name based on latitude and longitude
+    Function to return country name based on latitude and longitude
     This function is initialized and used in the SQL query
     :param latitude: Latitude
     :param longitude: Longitutde
@@ -157,4 +180,8 @@ def dbDriver(db_path, csv_input_file, csv_output_file, map_output_file):
 
 
 if __name__ == "__main__":
-    dbDriver(db_dir, csv_in, csv_out, map_out)
+    print("\n~~ geoDSD now running ~~\n")
+    print("Verifying all paths exist")
+    make_dir(db_dir)
+    make_dir(output_dir)
+    dbDriver(db_file, csv_in, csv_out, map_out)
