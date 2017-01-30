@@ -47,13 +47,13 @@ errno
 Usage
 --------
 
-Usage:
+Usage:  
 $ python main.py
 
-Input:
+Input:  
 1. CSV of fictious user metadata with lat/lons
 
-Output:
+Output:  
 1. SQLite database file  
 2. CSV of SQL query  
 3. PNG image of map with location(s) of query results  
