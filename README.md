@@ -13,7 +13,7 @@ e. Plot location(s) of query onto a map using matplotlib's basemap
 
 ### Plot locations of SQL query on map
 
-![geoDSD dualmode](https://github.com/awentland90/geoDSD/tree/master/images/query_plot_results.png)
+![geoDSD dualmode](https://github.com/awentland90/geoDSD/blob/master/images/query_plot_results.png)
 
 
 Download & Installation
