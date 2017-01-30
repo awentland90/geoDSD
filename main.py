@@ -11,18 +11,18 @@ This program is a simple proof of concept and template of the following:
     e. Plot location(s) of query onto a map using matplotlib's basemap
 
 Installation:
-All packages either come with a standard Python installation or are installable with pip or conda
+    All packages either come with a standard Python installation or are installable with pip or conda
 
 Usage:
-$ python main.py
+    $ python main.py
 
 Input:
-1. CSV of fictious user metadata with lat/lons
+    1. CSV of fictious user metadata with lat/lons
 
 Output:
-1. SQLite database file
-2. CSV of SQL query
-3. PNG image of map with location(s) of query results
+    1. SQLite database file
+    2. CSV of SQL query
+    3. PNG image of map with location(s) of query results
 
 The dataset used in this program is fictitious and does not intentionally reflect any real person
 In Law & Order speak: "The preceding data is fictional. No actual person or event was depicted."
