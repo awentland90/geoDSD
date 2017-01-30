@@ -51,7 +51,7 @@ Usage:
 $ python main.py
 
 Input:  
-1. CSV of fictious user metadata with lat/lons
+1. CSV of fictitious user metadata with lat/lons
 
 Output:  
 1. SQLite database file  
